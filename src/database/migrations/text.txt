@@ -1,0 +1,1 @@
+migrations são referente a criar/alterar tabelas na DB

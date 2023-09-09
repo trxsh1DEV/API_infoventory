@@ -1,6 +1,14 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+import './src/database';
+
 import express from 'express';
 import homeRoutes from './src/routes/homeRoutes';
-import postRoutes from './src/routes/postRoutes';
+import userRoutes from './src/routes/userRoutes';
+import tokensRoutes from './src/routes/tokenRoutes';
+// import postRoutes from './src/routes/postRoutes';
 
 class App {
   constructor() {
@@ -16,7 +24,9 @@ class App {
 
   routes() {
     this.app.use('/', homeRoutes);
-    this.app.use('/devices/', postRoutes);
+    this.app.use('/users/', userRoutes);
+    this.app.use('/tokens/', tokensRoutes);
+    // this.app.use('/devices/', postRoutes);
   }
 }
 

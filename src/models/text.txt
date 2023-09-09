@@ -1,0 +1,1 @@
+Aqui em models sim estamos efetivamente criando os models (modelos) que serão usados na DB

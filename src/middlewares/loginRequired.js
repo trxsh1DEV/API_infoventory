@@ -18,7 +18,7 @@ export default async (req, res, next) => {
 
     // Validando que a cada requisição o id e mail permanecem os mesmos do token
     const userCurrent = await User.findOne({
-      id, email,
+      where: { id, email },
     });
 
     if (!userCurrent) {
